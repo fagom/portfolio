@@ -6,6 +6,8 @@ const keys = require("./src/config/keys");
 
 require("./src/models/Profile");
 require("./src/models/TimeLine");
+require("./src/models/Skills");
+require("./src/models/Project");
 
 try {
   mongoose.connect(keys.mongoURI, {
@@ -24,9 +26,13 @@ app.use(express.urlencoded({ extended: true }));
 
 const getProfileDetailsRoute = require("./src/routes/get-profile-details");
 const getTimelineDetailsRoute = require("./src/routes/get-career-timeline");
+const getSkillDetailsRoute = require("./src/routes/get-skills-details");
+const getProjectDetailsRoute = require("./src/routes/get-project-details");
 
 app.use(getProfileDetailsRoute);
 app.use(getTimelineDetailsRoute);
+app.use(getSkillDetailsRoute);
+app.use(getProjectDetailsRoute);
 
 const PORT = process.env.PORT || 5000;
 

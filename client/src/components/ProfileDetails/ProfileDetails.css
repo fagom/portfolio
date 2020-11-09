@@ -44,8 +44,8 @@
     text-align: center !important;
   }
   .profile__avatar {
-    width: 200px !important;
-    height: 200px !important;
+    width: 180px !important;
+    height: 180px !important;
     display: inline-block !important;
   }
   .profile__text {
