@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 
 const ObjectId = mongoose.Types.ObjectId;
-const keys = require("../config/keys");
+const keys = require("../config/prod");
 
 const SkillModel = mongoose.model("skills_details");
 import { SkillsDetails } from "../common/base-skills-details";

@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const ObjectId = mongoose_1.default.Types.ObjectId;
-const keys = require("../config/keys");
+const keys = require("../config/prod");
 const base_timeline_details_1 = require("../common/base-timeline-details");
 const TimeLineModel = mongoose_1.default.model("career_timeline_details");
 const router = express_1.default.Router();

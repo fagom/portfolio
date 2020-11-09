@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const ObjectId = mongoose_1.default.Types.ObjectId;
-const keys = require("../config/keys");
+const keys = require("../config/prod");
 const SkillModel = mongoose_1.default.model("skills_details");
 const base_skills_details_1 = require("../common/base-skills-details");
 const router = express_1.default.Router();

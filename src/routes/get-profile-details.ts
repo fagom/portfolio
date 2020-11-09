@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const ObjectId = mongoose.Types.ObjectId;
 
-const keys = require("../config/keys");
+const keys = require("../config/prod");
 import { ProfileDetails } from "../common/base-profile-details";
 
 const ProfileModel = mongoose.model("Port_Profile_Details");
