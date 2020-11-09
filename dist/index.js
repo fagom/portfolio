@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === "production") {
     //Express will serve up index.html if it doesnt recognise the route
     const path = require("path");
     app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+        res.sendFile(path.resolve(__dirname, "../", "client", "build", "index.html"));
     });
 }
 app.listen(PORT, () => console.log(`Server API App listening on Port ${PORT}`));
