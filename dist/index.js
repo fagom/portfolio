@@ -9,6 +9,7 @@ const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const keys = require("./src/config/keys");
 require("./src/models/Profile");
+require("./src/models/TimeLine");
 try {
     mongoose_1.default.connect(keys.mongoURI, {
         useNewUrlParser: true,
@@ -24,6 +25,8 @@ app.use(cors_1.default());
 app.use(body_parser_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 const getProfileDetailsRoute = require("./src/routes/get-profile-details");
+const getTimelineDetailsRoute = require("./src/routes/get-career-timeline");
 app.use(getProfileDetailsRoute);
+app.use(getTimelineDetailsRoute);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server API App listening on Port ${PORT}`));

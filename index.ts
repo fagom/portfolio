@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 const keys = require("./src/config/keys");
 
 require("./src/models/Profile");
+require("./src/models/TimeLine");
 
 try {
   mongoose.connect(keys.mongoURI, {
@@ -22,8 +23,10 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
 const getProfileDetailsRoute = require("./src/routes/get-profile-details");
+const getTimelineDetailsRoute = require("./src/routes/get-career-timeline");
 
 app.use(getProfileDetailsRoute);
+app.use(getTimelineDetailsRoute);
 
 const PORT = process.env.PORT || 5000;
 
