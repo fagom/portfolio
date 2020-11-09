@@ -37,7 +37,7 @@ app.use(getProjectDetailsRoute);
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV === "production") {
     //Express will server up production assets like main.js or main.css file
-    app.use(express_1.default.static("client/build"));
+    app.use(express_1.default.static("../client/build"));
     //Express will serve up index.html if it doesnt recognise the route
     const path = require("path");
     app.get("*", (req, res) => {
