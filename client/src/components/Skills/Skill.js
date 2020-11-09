@@ -9,7 +9,7 @@ export default class Skills extends Component {
   state = { loading: true, data: [] };
 
   async componentDidMount() {
-    const res = await axios.get("http://localhost:5000/api/skills");
+    const res = await axios.get(`${process.env.APIURL}/api/skills`);
 
     if (res.status) {
       this.setState({

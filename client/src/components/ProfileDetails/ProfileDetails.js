@@ -17,7 +17,7 @@ export default class ProfileDetails extends Component {
   };
 
   async componentDidMount() {
-    const res = await axios.get("http://localhost:5000/api/profile");
+    const res = await axios.get(`${process.env.APIURL}/api/profile`);
     if (res.status) {
       this.setState({
         fullname: res.data.fullname,

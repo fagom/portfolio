@@ -7,7 +7,7 @@ export default class Projects extends Component {
   state = { loading: true, data: [] };
 
   async componentDidMount() {
-    const res = await axios.get("http://localhost:5000/api/projects");
+    const res = await axios.get(`${process.env.APIURL}/api/projects`);
 
     if (res.status) {
       this.setState({
