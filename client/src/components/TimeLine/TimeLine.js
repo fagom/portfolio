@@ -15,7 +15,7 @@ export default class TimeLineDetails extends Component {
   COLORS = ["#c62828", "#673AB7", "#E64A19", "#F57F17", "#0091EA"];
 
   async componentDidMount() {
-    const res = await axios.get(`${process.env.APIURL}/api/timeline`);
+    const res = await axios.get(`/api/timeline`);
 
     if (res.status) {
       this.setState({
