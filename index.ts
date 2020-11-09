@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
-const keys = require("./src/config/keys");
+const keys = require("./src/config/prod");
 
 require("./src/models/Profile");
 require("./src/models/TimeLine");
