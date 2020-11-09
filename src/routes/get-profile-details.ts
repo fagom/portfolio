@@ -1,8 +1,5 @@
 import express from "express";
-import bodyParser from "body-parser";
 import mongoose from "mongoose";
-import cors from "cors";
-import axios from "axios";
 
 const ObjectId = mongoose.Types.ObjectId;
 
@@ -24,6 +21,10 @@ router.get("/api/profile", async (req, res) => {
     finalresult = new ProfileDetails(
       profile.get("_id"),
       profile.get("fullname"),
+      profile.get("position"),
+      profile.get("currcompany"),
+      profile.get("city"),
+      profile.get("state"),
       profile.get("emailid"),
       profile.get("facebookURL"),
       profile.get("twitterURL"),

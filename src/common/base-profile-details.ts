@@ -3,6 +3,10 @@ interface Profile {
   data: {
     _id: Schema.Types.ObjectId;
     fullname: string;
+    position: string;
+    currcompany: string;
+    city: string;
+    state: string;
     emailid: string;
     facebookURL: string;
     twitterURL: string;
@@ -22,6 +26,10 @@ export class ProfileDetails extends ProfileInterface<Profile> {
   constructor(
     _id: Schema.Types.ObjectId,
     fullname: string,
+    position: string,
+    currcompany: string,
+    city: string,
+    state: string,
     emailid: string,
     facebookURL: string,
     twitterURL: string,
@@ -33,6 +41,10 @@ export class ProfileDetails extends ProfileInterface<Profile> {
     this.data = {
       _id,
       fullname,
+      position,
+      currcompany,
+      city,
+      state,
       emailid,
       facebookURL,
       twitterURL,
