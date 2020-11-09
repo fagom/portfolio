@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const keys = require("./src/config/keys");
+const keys = require("./src/config/prod");
 require("./src/models/Profile");
 require("./src/models/TimeLine");
 require("./src/models/Skills");
