@@ -123,6 +123,9 @@ export default class Projects extends Component {
                         style={{ fontWeight: "bold" }}
                       >
                         {item.title}{" "}
+                      </Typography>
+                      <Typography>
+                        Status:{" "}
                         {item.status === "Live" ? (
                           <b style={{ fontSize: "14px", color: "green" }}>
                             {item.status}
@@ -148,10 +151,43 @@ export default class Projects extends Component {
                           textDecoration: "none",
                           color: "#388E3C",
                           fontWeight: "bold",
+                          display: "inline-block",
                         }}
                       >
-                        View Github repo
+                        Github repo
+                        <OpenInNewIcon
+                          style={{
+                            display: "inline-block",
+                            float: "left",
+                            fontSize: "17px",
+                          }}
+                        />
                       </a>
+                      {item.websiteURL === "null" ? (
+                        ""
+                      ) : (
+                        <a
+                          href={item.websiteURL}
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{
+                            textDecoration: "none",
+                            color: "#388E3C",
+                            fontWeight: "bold",
+                            display: "inline-block",
+                            marginLeft: "10px",
+                          }}
+                        >
+                          Website
+                          <OpenInNewIcon
+                            style={{
+                              display: "inline-block",
+                              float: "left",
+                              fontSize: "17px",
+                            }}
+                          />
+                        </a>
+                      )}
                     </CardContent>
                   </Card>
                 );

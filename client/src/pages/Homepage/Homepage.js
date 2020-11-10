@@ -8,7 +8,10 @@ export default class Homepage extends Component {
   render() {
     return (
       <div>
-        <AppBar style={{ backgroundColor: "white", color: "black" }}>
+        <AppBar
+          elevation={1}
+          style={{ backgroundColor: "white", color: "black" }}
+        >
           <Toolbar>
             <Typography
               style={{ color: "black", fontWeight: "bold", fontSize: "20px" }}
