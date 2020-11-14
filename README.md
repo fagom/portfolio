@@ -1,5 +1,5 @@
 # fagom.me
-Fagom.me is a Server Side Redered React App built with Node, Express and MongoDB.
+Fagom.me is a Server Side Redered React App built with Node, Express and MongoDB and hosted with Heroku.
 
 Please visit the website : http://www.fagom.me
 
