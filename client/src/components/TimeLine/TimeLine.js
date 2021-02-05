@@ -38,8 +38,8 @@ export default class TimeLineDetails extends Component {
           {this.state.data.map((item, index) => {
             return (
               <Card
-                elevation={5}
-                style={{ margin: "5px", padding: "0px" }}
+                elevation={0}
+                style={{ margin: "5px", padding: "0px",backgroundColor:'#FEEFEC' }}
                 key={index}
               >
                 <CardContent>
@@ -53,7 +53,7 @@ export default class TimeLineDetails extends Component {
                       <Typography
                         style={{
                           fontWeight: "bold",
-                          color: this.COLORS[index % 5],
+                          color: '#D52D0B',
                           fontSize: "20px",
                           width: "50px",
                         }}
@@ -64,14 +64,14 @@ export default class TimeLineDetails extends Component {
 
                     <TimelineContent>
                       <Typography
-                        style={{ fontWeight: "bold", color: "black" }}
+                        style={{ fontWeight: "bold", color: "#F67251", }}
                       >
                         {item.title}
                       </Typography>
                       <div>
                         {item.summary.map((sumitem, index1) => {
                           return (
-                            <div key={index1} style={{ color: "black" }}>
+                            <div key={index1} style={{ color: "#F67251" }}>
                               {"- " + sumitem}
                             </div>
                           );

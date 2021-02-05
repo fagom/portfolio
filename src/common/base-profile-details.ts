@@ -13,6 +13,7 @@ interface Profile {
     instagramURL: string;
     linkedinURL: string;
     profilePic: string;
+    additionaldetails:string
   };
 }
 
@@ -35,7 +36,8 @@ export class ProfileDetails extends ProfileInterface<Profile> {
     twitterURL: string,
     instagramURL: string,
     linkedinURL: string,
-    profilePic: string
+    profilePic: string,
+    additionaldetails:string
   ) {
     super();
     this.data = {
@@ -51,6 +53,7 @@ export class ProfileDetails extends ProfileInterface<Profile> {
       instagramURL,
       linkedinURL,
       profilePic,
+      additionaldetails
     };
   }
 

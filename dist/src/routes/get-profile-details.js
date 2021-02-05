@@ -25,7 +25,7 @@ router.get("/api/profile", (req, res) => __awaiter(void 0, void 0, void 0, funct
         profilename: keys.username,
     });
     if (profile) {
-        finalresult = new base_profile_details_1.ProfileDetails(profile.get("_id"), profile.get("fullname"), profile.get("position"), profile.get("currcompany"), profile.get("city"), profile.get("state"), profile.get("emailid"), profile.get("facebookURL"), profile.get("twitterURL"), profile.get("instagramURL"), profile.get("linkedinURL"), profile.get("profilePic")).parseDetails();
+        finalresult = new base_profile_details_1.ProfileDetails(profile.get("_id"), profile.get("fullname"), profile.get("position"), profile.get("currcompany"), profile.get("city"), profile.get("state"), profile.get("emailid"), profile.get("facebookURL"), profile.get("twitterURL"), profile.get("instagramURL"), profile.get("linkedinURL"), profile.get("profilePic"), profile.get("additionaldetails")).parseDetails();
     }
     res.status(200).send(finalresult);
 }));

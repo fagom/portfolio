@@ -9,6 +9,7 @@
   }
   .profile__text {
     text-align: center !important;
+    padding-top: 10px;
   }
 }
 
@@ -23,6 +24,7 @@
   }
   .profile__text {
     text-align: center !important;
+    padding-top: 10px;
   }
 }
 
@@ -36,6 +38,7 @@
   }
   .profile__text {
     text-align: center !important;
+    padding-top: 10px;
   }
 }
 
@@ -50,5 +53,6 @@
   }
   .profile__text {
     text-align: left !important;
+    padding-top: 10px;
   }
 }

@@ -4,7 +4,7 @@ exports.ProfileDetails = void 0;
 class ProfileInterface {
 }
 class ProfileDetails extends ProfileInterface {
-    constructor(_id, fullname, position, currcompany, city, state, emailid, facebookURL, twitterURL, instagramURL, linkedinURL, profilePic) {
+    constructor(_id, fullname, position, currcompany, city, state, emailid, facebookURL, twitterURL, instagramURL, linkedinURL, profilePic, additionaldetails) {
         super();
         this.data = {
             _id,
@@ -19,6 +19,7 @@ class ProfileDetails extends ProfileInterface {
             instagramURL,
             linkedinURL,
             profilePic,
+            additionaldetails
         };
     }
     parseDetails() {

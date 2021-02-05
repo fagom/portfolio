@@ -30,7 +30,8 @@ router.get("/api/profile", async (req, res) => {
       profile.get("twitterURL"),
       profile.get("instagramURL"),
       profile.get("linkedinURL"),
-      profile.get("profilePic")
+      profile.get("profilePic"),
+      profile.get("additionaldetails")
     ).parseDetails();
   }
 

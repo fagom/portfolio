@@ -13,6 +13,7 @@ interface Profile {
         instagramURL: string;
         linkedinURL: string;
         profilePic: string;
+        additionaldetails: string;
     };
 }
 declare abstract class ProfileInterface<T extends Profile> {
@@ -20,7 +21,7 @@ declare abstract class ProfileInterface<T extends Profile> {
 }
 export declare class ProfileDetails extends ProfileInterface<Profile> {
     data: Profile["data"];
-    constructor(_id: Schema.Types.ObjectId, fullname: string, position: string, currcompany: string, city: string, state: string, emailid: string, facebookURL: string, twitterURL: string, instagramURL: string, linkedinURL: string, profilePic: string);
+    constructor(_id: Schema.Types.ObjectId, fullname: string, position: string, currcompany: string, city: string, state: string, emailid: string, facebookURL: string, twitterURL: string, instagramURL: string, linkedinURL: string, profilePic: string, additionaldetails: string);
     parseDetails(): {
         _id: Schema.Types.ObjectId;
         fullname: string;
@@ -34,6 +35,7 @@ export declare class ProfileDetails extends ProfileInterface<Profile> {
         instagramURL: string;
         linkedinURL: string;
         profilePic: string;
+        additionaldetails: string;
     };
 }
 export {};

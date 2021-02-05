@@ -9,12 +9,12 @@ export default class Homepage extends Component {
     return (
       <div>
         <AppBar
-          elevation={1}
-          style={{ backgroundColor: "white", color: "black" }}
+          elevation={0.2}
+          style={{ backgroundColor: "black", color: "black" }}
         >
           <Toolbar>
             <Typography
-              style={{ color: "black", fontWeight: "bold", fontSize: "20px" }}
+              style={{ color: "white", fontWeight: "bold", fontSize: "20px" }}
             >
               Carpe diem
             </Typography>

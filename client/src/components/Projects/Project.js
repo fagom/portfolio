@@ -29,19 +29,19 @@ export default class Projects extends Component {
             {this.state.data.map((item, index) => {
               if (index % 2 === 0) {
                 return (
-                  <Card key={index} elevation={10}>
+                  <Card key={index} elevation={0} style={{backgroundColor:'#CEF3D2'}}>
                     <CardContent>
                       <Typography
                         componen="h6"
                         variant="h6"
-                        style={{ fontWeight: "bold" }}
+                        style={{ fontWeight: "bold",color:'#28A434',fontSize:'17px' }}
                       >
                         {item.title}{" "}
                       </Typography>
-                      <Typography>
+                      <Typography style={{fontSize:'12px'}}>
                         Status:{" "}
                         {item.status === "Live" ? (
-                          <b style={{ fontSize: "14px", color: "green" }}>
+                          <b style={{ fontSize: "12px", color: "green" }}>
                             {item.status}
                           </b>
                         ) : (
@@ -52,22 +52,23 @@ export default class Projects extends Component {
                       </Typography>
                     </CardContent>
                     <CardContent
-                      style={{ paddingTop: "0px", marginTop: "0px" }}
+                      style={{ paddingTop: "0px", marginTop: "0px",fontSize:'14px',color:'#28A434',fontWeight:'450' }}
                     >
                       {item.description}
                     </CardContent>
                     <CardContent
                       style={{ paddingTop: "0px", marginTop: "0px" }}
                     >
-                      <a
+                      {item.githubURL === null ? null:(<a
                         href={item.githubURL}
                         target="_blank"
                         rel="noreferrer"
                         style={{
                           textDecoration: "none",
                           color: "#388E3C",
-                          fontWeight: "bold",
+                          fontWeight: "normal",
                           display: "inline-block",
+                          fontSize:'14px'
                         }}
                       >
                         Github repo
@@ -78,7 +79,7 @@ export default class Projects extends Component {
                             fontSize: "17px",
                           }}
                         />
-                      </a>
+                      </a>)}
                       {item.websiteURL === "null" ? (
                         ""
                       ) : (
@@ -89,9 +90,10 @@ export default class Projects extends Component {
                           style={{
                             textDecoration: "none",
                             color: "#388E3C",
-                            fontWeight: "bold",
+                            fontWeight: "normal",
                             display: "inline-block",
                             marginLeft: "10px",
+                            fontSize:'14px'
                           }}
                         >
                           Website
@@ -115,19 +117,19 @@ export default class Projects extends Component {
             {this.state.data.map((item, index) => {
               if (index % 2 === 1) {
                 return (
-                  <Card key={index} elevation={10}>
+                  <Card key={index} elevation={0} style={{backgroundColor:'#CEF3D2'}}>
                     <CardContent>
                       <Typography
                         componen="h6"
                         variant="h6"
-                        style={{ fontWeight: "bold" }}
+                        style={{ fontWeight: "bold",color:'#28A434',fontSize:'17px' }}
                       >
                         {item.title}{" "}
                       </Typography>
-                      <Typography>
+                      <Typography style={{fontSize:'12px'}}>
                         Status:{" "}
                         {item.status === "Live" ? (
-                          <b style={{ fontSize: "14px", color: "green" }}>
+                          <b style={{ fontSize: "12px", color: "green" }}>
                             {item.status}
                           </b>
                         ) : (
@@ -138,20 +140,21 @@ export default class Projects extends Component {
                       </Typography>
                     </CardContent>
                     <CardContent
-                      style={{ paddingTop: "0px", marginTop: "0px" }}
+                      style={{ paddingTop: "0px", marginTop: "0px",fontSize:'14px',color:'#28A434',fontWeight:'450' }}
                     >
                       {item.description}
                     </CardContent>
                     <CardContent>
-                      <a
+                      {item.githubURL === "null"?null:(<a
                         href={item.githubURL}
                         target="_blank"
                         rel="noreferrer"
                         style={{
                           textDecoration: "none",
                           color: "#388E3C",
-                          fontWeight: "bold",
+                          fontWeight: "normal",
                           display: "inline-block",
+                          fontSize:'14px'
                         }}
                       >
                         Github repo
@@ -162,7 +165,7 @@ export default class Projects extends Component {
                             fontSize: "17px",
                           }}
                         />
-                      </a>
+                      </a>)}
                       {item.websiteURL === "null" ? (
                         ""
                       ) : (
@@ -173,9 +176,10 @@ export default class Projects extends Component {
                           style={{
                             textDecoration: "none",
                             color: "#388E3C",
-                            fontWeight: "bold",
+                            fontWeight: "normal",
                             display: "inline-block",
                             marginLeft: "10px",
+                            fontSize:'14px'
                           }}
                         >
                           Website

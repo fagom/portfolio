@@ -32,6 +32,7 @@ export default class ProfileDetails extends Component {
         linkedinURL: res.data.linkedinURL,
         profilePic: res.data.profilePic,
         loading: false,
+        additionaldetails:res.data.additionaldetails
       });
     }
   }
@@ -56,16 +57,16 @@ export default class ProfileDetails extends Component {
           </Grid>
           <Grid item xs={12} md={8} className="profile__text">
             <h2>Hey, I am {this.state.fullname}</h2>
-            <Typography>
+            <Typography style={{fontSize:'14px'}}>
               I am currently based out of {this.state.city},{this.state.state}{" "}
-              working @<b>{this.state.currcompany}</b> as {this.state.position}.
+              working @<b>{this.state.currcompany}</b> as {this.state.position}.{this.state.additionaldetails}
             </Typography>
             <Grid container>
               <Grid item xs={12} className="profile__text">
                 <Typography
                   style={{
                     color: "green",
-                    fontWeight: "bold",
+                    fontWeight: "normal",
                     fontSize: "15px",
                   }}
                 >
@@ -77,7 +78,7 @@ export default class ProfileDetails extends Component {
                   <FacebookIcon
                     style={{
                       color: this.state.fbIconColor,
-                      fontSize: "40px",
+                      fontSize: "30px",
                       padding: "10px",
                     }}
                   />
@@ -86,7 +87,7 @@ export default class ProfileDetails extends Component {
                   <TwitterIcon
                     style={{
                       color: this.state.twitterIconColor,
-                      fontSize: "40px",
+                      fontSize: "30px",
                       padding: "10px",
                     }}
                   />
@@ -95,7 +96,7 @@ export default class ProfileDetails extends Component {
                   <InstagramIcon
                     style={{
                       color: this.state.instaIconColor,
-                      fontSize: "40px",
+                      fontSize: "30px",
                       padding: "10px",
                     }}
                   />
@@ -104,7 +105,7 @@ export default class ProfileDetails extends Component {
                   <LinkedInIcon
                     style={{
                       color: this.state.linkeinIconColor,
-                      fontSize: "40px",
+                      fontSize: "30px",
                       padding: "10px",
                     }}
                   />
