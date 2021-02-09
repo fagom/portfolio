@@ -8,4 +8,6 @@ RUN npm install
 
 COPY ./ ./
 
+RUN npm install --prefix client
+
 CMD ["npm","start"]

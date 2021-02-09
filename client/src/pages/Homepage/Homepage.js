@@ -1,5 +1,6 @@
 import { AppBar, Container, Toolbar, Typography } from "@material-ui/core";
 import React, { Component } from "react";
+import Certifications from "../../components/Certifications/Certifications";
 import ProfileDetails from "../../components/ProfileDetails/ProfileDetails";
 import Projects from "../../components/Projects/Project";
 import Skills from "../../components/Skills/Skill";
@@ -24,6 +25,7 @@ export default class Homepage extends Component {
           <ProfileDetails />
           <TimeLineDetails />
           <Projects />
+          <Certifications />
           <Skills />
         </Container>
       </div>
