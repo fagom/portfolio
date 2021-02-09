@@ -8,6 +8,7 @@ require("./src/models/Profile");
 require("./src/models/TimeLine");
 require("./src/models/Skills");
 require("./src/models/Project");
+require("./src/models/Certification");
 
 try {
   mongoose.connect(keys.mongoURI, {
@@ -28,11 +29,13 @@ const getProfileDetailsRoute = require("./src/routes/get-profile-details");
 const getTimelineDetailsRoute = require("./src/routes/get-career-timeline");
 const getSkillDetailsRoute = require("./src/routes/get-skills-details");
 const getProjectDetailsRoute = require("./src/routes/get-project-details");
+const getCertificationDetailsRoute = require("./src/routes/get-certification-details");
 
 app.use(getProfileDetailsRoute);
 app.use(getTimelineDetailsRoute);
 app.use(getSkillDetailsRoute);
 app.use(getProjectDetailsRoute);
+app.use(getCertificationDetailsRoute);
 
 const PORT = process.env.PORT || 5000;
 
